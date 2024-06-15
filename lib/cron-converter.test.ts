@@ -153,7 +153,7 @@ describe("5 digit expression, no seconds", () => {
     ],
     [
       'Cron "0 23 30 11 *" UTC to Africa/Lagos (yearly)',
-      "0 23 30 11 *",
+      "10 0 23 30 11 *",
       "UTC",
       "Africa/Lagos",
       "0 0 1 12 *",
