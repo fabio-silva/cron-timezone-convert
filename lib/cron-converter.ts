@@ -5,6 +5,7 @@ const cronConverter = (
   cronExpression: string,
   originalTimeZone: string,
   targetTimeZone: string,
+  includeSeconds = true,
 ): string => {
   const interval = cronParser.parseExpression(cronExpression);
   const now = new Date();
@@ -51,12 +52,12 @@ const cronConverter = (
     c.days,
   );
   try {
-    return setFieldsCron(cronExpressionFields);
+    return setFieldsCron(cronExpressionFields, includeSeconds);
   } catch (err: any) {
     if (err.message.includes("Invalid explicit day of month definition")) {
       cronExpressionFields.dayOfMonth = [1];
       cronExpressionFields.month = addMonth(cronExpressionFields.month, 1);
-      return setFieldsCron(cronExpressionFields);
+      return setFieldsCron(cronExpressionFields, includeSeconds);
     }
     return cronExpression;
   }
@@ -81,10 +82,15 @@ const getFieldsCron = (expression: string) => {
   return JSON.parse(JSON.stringify(interval.fields));
 };
 
-const setFieldsCron = (fields: any) => {
-  // TODO only if we ever need seconds
-  const second = getSeconds({ ...fields });
-  return `${second} ${cronParser.fieldsToExpression(fields).stringify()}`;
+const setFieldsCron = (fields: any, includeSeconds: boolean) => {
+  const expression = cronParser.fieldsToExpression(fields).stringify();
+
+  if (includeSeconds) {
+    const second = getSeconds({ ...fields });
+    return `${second} ${expression}`;
+  }
+
+  return expression;
 };
 
 const getSeconds = (fields: any) => {
