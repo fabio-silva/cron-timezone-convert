@@ -1,22 +1,22 @@
-# cron-timezone-convert
+# cron-timezone-converter
 Convert cron expressions between different timezones
 
 Based on [cron-timezone-convert](https://github.com/Pablillo92/cron-timezone-convert), but using date-fns.
 
 ## Installation
 
-`npm i cron-timezone-convert`
+`npm i cron-timezone-converter`
 
 ## Usage
 
 The library allows to either use 5 digit or 6 digit cron syntax (i.e. include/exclude seconds)
 
 ```js
-import { convert } from 'cron-timezone-convert';
+import { convert } from 'cron-timezone-converter';
 
 // OR
 
-const convert = require("cron-timezone-convert");
+const convert = require("cron-timezone-converter");
 ```
 ```js
 convert("0 0 8-10 * * *", "UTC", "US/Arizona");

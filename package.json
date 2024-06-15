@@ -1,10 +1,10 @@
 {
-  "name": "cron-timezone-convert",
+  "name": "cron-timezone-converter",
   "version": "1.0.0",
   "description": "Convert cron expressions between different timezones",
   "type": "module",
-  "main": "./dist/cron-timezone-convert.umd.cjs",
-  "module": "./dist/cron-timezone-convert.js",
+  "main": "./dist/cron-timezone-converter.umd.cjs",
+  "module": "./dist/cron-timezone-converter.js",
   "scripts": {
     "test": "vitest run",
     "lint": "eslint lib --fix",
