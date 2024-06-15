@@ -13,6 +13,10 @@ The library allows to either use 5 digit or 6 digit cron syntax (i.e. include/ex
 
 ```js
 import { convert } from 'cron-timezone-convert';
+
+// OR
+
+const convert = require("cron-timezone-convert");
 ```
 ```js
 convert("0 0 8-10 * * *", "UTC", "US/Arizona");
