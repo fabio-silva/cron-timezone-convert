@@ -1,0 +1,44 @@
+{
+  "name": "cron-timezone-convert",
+  "version": "1.0.0",
+  "description": "Convert cron expressions between different timezones",
+  "type": "module",
+  "main": "./dist/cron-timezone-convert.umd.js",
+  "module": "./dist/cron-timezone-convert.mjs",
+  "scripts": {
+    "test": "vitest run",
+    "lint": "eslint lib --fix",
+    "format": "prettier lib  --write",
+    "build": "vite build"
+  },
+  "keywords": [
+    "cron",
+    "cronjob",
+    "crontab",
+    "schedule",
+    "parser",
+    "cron expression",
+    "cron description",
+    "timezone"
+  ],
+  "author": "Fábio Silva",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fabio-silva/cron-timezone-convert.git"
+  },
+  "homepage": "https://github.com/fabio-silva/cron-timezone-convert",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.14.2",
+    "eslint": "^9.5.0",
+    "prettier": "^3.3.2",
+    "typescript": "^5.4.5",
+    "typescript-eslint": "^7.13.0",
+    "vite": "^5.3.1",
+    "vitest": "^1.6.0"
+  },
+  "dependencies": {
+    "cron-parser": "^4.9.0",
+    "date-fns-tz": "^3.1.3"
+  }
+}
