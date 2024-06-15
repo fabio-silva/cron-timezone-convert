@@ -1,4 +1,4 @@
-import cronTzConverter from "./cron-converter";
+import cronTzConverter from "./cron-timezone-converter";
 
 describe("full 6 digit expression", () => {
   const cases: [string, string, string, string, string][] = [

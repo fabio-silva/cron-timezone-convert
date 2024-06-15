@@ -1,1 +1,1 @@
-export { default } from "./cron-converter";
+export { default } from "./cron-timezone-converter";
