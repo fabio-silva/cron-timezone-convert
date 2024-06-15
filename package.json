@@ -4,7 +4,7 @@
   "description": "Convert cron expressions between different timezones",
   "type": "module",
   "main": "./dist/cron-timezone-convert.umd.js",
-  "module": "./dist/cron-timezone-convert.mjs",
+  "module": "./dist/cron-timezone-convert.js",
   "scripts": {
     "test": "vitest run",
     "lint": "eslint lib --fix",
@@ -27,6 +27,7 @@
     "url": "https://github.com/fabio-silva/cron-timezone-convert.git"
   },
   "homepage": "https://github.com/fabio-silva/cron-timezone-convert",
+  "files": ["dist"],
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^20.14.2",
@@ -40,5 +41,9 @@
   "dependencies": {
     "cron-parser": "^4.9.0",
     "date-fns-tz": "^3.1.3"
+  },
+  "engines": {
+    "node": ">=18",
+    "npm": ">=9"
   }
 }
